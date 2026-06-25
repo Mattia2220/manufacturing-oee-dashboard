@@ -38,7 +38,7 @@ La **dashboard Power BI** è strutturata in 3 pagine: Failure Overview, Root Cau
 | Trasformazione dati | SQL — CTE, Window Functions (ROW_NUMBER, NTILE), CASE WHEN, UNION ALL |
 | Qualità del dato | Null check, duplicate check, outlier detection, distribuzione categorica |
 | Reporting | Power BI — Misure DAX dinamiche, formattazione condizionale, segnalibri, slicer |
-| Version Control | GitHub |
+
 
 ---
 
