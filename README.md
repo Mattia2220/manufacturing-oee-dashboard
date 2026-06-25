@@ -80,6 +80,12 @@ L'analisi della distribuzione dei guasti per tool wear evidenzia inoltre un punt
 ### Machine Risk
 ![Machine Risk](images/page3_machine_risk.png)
 
+## Come utilizzare la Dashboard
+
+Per esplorare la dashboard in modo interattivo, scaricare il file `.pbix` dalla cartella `powerbi/` 
+e aprirlo con **Power BI Desktop** (scaricabile gratuitamente da [qui](https://powerbi.microsoft.com/it-it/desktop/)).
+I dati sono già incorporati nel file — non è necessario installare SQL Server o scaricare file aggiuntivi.
+
 ---
 
 ## Autore
