@@ -1,4 +1,4 @@
-# 🏭 Manufacturing OEE Dashboard
+# Manufacturing OEE Dashboard
 
 ## 1. Sommario Esecutivo
 Progetto di analisi end-to-end su un dataset di produzione manifatturiera composto da 10.000 record macchina.
@@ -83,6 +83,6 @@ L'analisi della distribuzione dei guasti per tool wear evidenzia inoltre un punt
 ---
 
 ## Autore
-**[Il tuo nome]**
-- LinkedIn: [link]
+**Mattia Falco**
+- LinkedIn: www.linkedin.com/in/mattia-falco-4b8b3033b 
 - GitHub: https://github.com/Mattia2220/manufacturing-oee-dashboard
