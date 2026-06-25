@@ -5,32 +5,37 @@ Setup Script: Database and Schema Initialization
 Description:
     This script creates the database and the three schemas following
     the Medallion Architecture pattern (Bronze, Silver, Gold).
-
     - Bronze: Raw data, no transformations
     - Silver: Cleaned and standardized data
     - Gold: Business-ready KPIs for reporting
-
     It also creates the bronze.production_raw table and loads
     the raw data from the source CSV file.
 ===============================================================================
 */
 
 -- Crea il database
-CREATE DATABASE ManufacturingOEE;
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'ManufacturingOEE')
+    CREATE DATABASE ManufacturingOEE;
 GO
 
 USE ManufacturingOEE;
 GO
 
 -- Crea i tre schemi
-CREATE SCHEMA bronze;
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'bronze')
+    EXEC('CREATE SCHEMA bronze');
 GO
-CREATE SCHEMA silver;
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'silver')
+    EXEC('CREATE SCHEMA silver');
 GO
-CREATE SCHEMA gold;
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'gold')
+    EXEC('CREATE SCHEMA gold');
 GO
 
 -- Crea la tabella bronze
+IF OBJECT_ID('bronze.production_raw', 'U') IS NOT NULL
+    DROP TABLE bronze.production_raw;
+
 CREATE TABLE bronze.production_raw (
     UDI                   INT,
     Product_ID            NVARCHAR(50),
@@ -50,7 +55,7 @@ CREATE TABLE bronze.production_raw (
 
 -- Carica i dati dal CSV
 BULK INSERT bronze.production_raw
-FROM 'C:\Users\TuoNome\Downloads\ai4i2020.csv'  -- aggiorna il percorso
+FROM 'C:\Users\Mattia\Downloads\ai4i2020.csv'  -- aggiorna il percorso
 WITH (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
