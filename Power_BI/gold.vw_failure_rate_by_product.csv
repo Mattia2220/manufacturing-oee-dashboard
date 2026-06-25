@@ -1,0 +1,4 @@
+﻿product_type;total_machines;total_failures;failure_rate_pct
+Low;6000;235;3,92
+High;1003;21;2,09
+Medium;2997;83;2,77

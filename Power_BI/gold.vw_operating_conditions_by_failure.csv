@@ -1,0 +1,11 @@
+﻿metric;min_value;max_value;avg_value;machine_failure
+air_temp_c;22,15;31,35;26,82;0
+air_temp_c;22,45;31,25;27,74;1
+process_temp_c;32,55;40,65;36,85;0
+process_temp_c;32,95;40,55;37,14;1
+rotational_speed_rpm;1168;2695;1540;0
+rotational_speed_rpm;1181;2886;1496;1
+torque_nm;12,6;70;39,63;0
+torque_nm;3,8;76,6;50,17;1
+tool_wear_min;0;246;106;0
+tool_wear_min;0;253;143;1
